@@ -1,4 +1,4 @@
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum LispValue {
     Atom(String),
     List(Vec<LispValue>),
