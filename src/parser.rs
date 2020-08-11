@@ -62,4 +62,9 @@ mod tests {
     fn test_parse_false() {
         assert_eq!(parse_false("#f"), Ok(("", LispValue::Bool(false))))
     }
+
+    #[test]
+    fn test_parse_atom() {
+        assert_eq!(parse_atom("=="), Ok(("", LispValue::String("==".to_owned()))))
+    }
 }
